@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Frontline Barbers in Papatoetoe, Auckland. Over 10 years of experience serving the community with professional haircuts and grooming.">
+    <title>About | Frontline Barbers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../shared.css">
+</head>
+
+<body>
+    <header class="site-header" id="site-header">
+        <a href="../" class="logo">Frontline Barbers</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../about/" class="active">About</a></li>
+                <li><a href="../services/">Services</a></li>
+                <li><a href="../bookings/">Bookings</a></li>
+                <li><a href="../contact/">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="../contact/" class="header-cta">Get in Touch</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="../">Home</a>
+        <a href="../about/" class="active">About</a>
+        <a href="../services/">Services</a>
+        <a href="../bookings/">Bookings</a>
+        <a href="../contact/">Contact</a>
+        <a href="../contact/" class="mobile-cta">Get in Touch</a>
+    </div>
+
+    <section class="page-banner">
+        <h1>About Frontline Barbers</h1>
+        <p>Over a decade of service to the Papatoetoe community</p>
+    </section>
+
+    <section class="section">
+        <div class="about-content">
+            <p class="fade-in">Frontline Barbers is a family friendly barbershop located on Shirley Road in Papatoetoe, serving the local community for over 10 years. What started as a small neighbourhood shop has grown into a trusted name in South Auckland, known for quality cuts and a welcoming atmosphere.</p>
+
+            <p class="fade-in">Our team of skilled barbers brings precision and care to every haircut. Whether you are after a sharp fade, a classic scissor cut, or a clean razor finish, we take the time to get it right. Many of our customers have been coming to us for years, bringing their kids and families along.</p>
+
+            <p class="fade-in">We believe a great barbershop is more than just a place to get a haircut. It is a place where you feel comfortable, where the conversation flows, and where you leave looking and feeling your best. That is the experience we aim to deliver, every single visit.</p>
+
+            <div class="values-grid">
+                <div class="value-card fade-in">
+                    <h3>&#127919; Precision Craft</h3>
+                    <p>Every cut is treated with care. We take our time to deliver consistently clean results that match your vision.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3>&#128106; Family Friendly</h3>
+                    <p>We welcome customers of all ages. Our barbers are patient with kids and experienced with all styles.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3>&#128170; Consistency</h3>
+                    <p>Our loyal customers return because they know what to expect. Quality work, friendly faces, fair prices.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3>&#127969; Community Roots</h3>
+                    <p>We are proud to be part of the Papatoetoe community. This is our home, and you are always welcome here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social proof callout -->
+    <section class="section section-dark" style="text-align:center;">
+        <div style="max-width:600px;margin:0 auto;">
+            <h2 class="section-title fade-in">Trusted by 73+ Customers</h2>
+            <div class="accent-rule"></div>
+            <p class="fade-in" style="font-size:1.15rem;line-height:1.9;color:var(--color-text);">"Best barber in south Auckland in my eyes."</p>
+            <p class="fade-in" style="font-weight:700;color:var(--color-accent);margin-top:12px;">Avi Prasad, 5 Stars</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Come See Us</h2>
+        <p>Walk in any day Monday through Saturday. No appointment needed.</p>
+        <a href="../bookings/" class="btn-white">Book a Visit</a>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">Frontline Barbers</div>
+                <p class="footer-tagline">Your neighbourhood barbershop in Papatoetoe. Professional cuts, friendly faces, and over a decade of experience.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../about/">About</a></li>
+                    <li><a href="../services/">Services</a></li>
+                    <li><a href="../bookings/">Bookings</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>1 Shirley Road, Papatoetoe</p>
+                <p>Auckland 2025, New Zealand</p>
+                <p><a href="tel:092780957" style="color:#ccc;">09 278 0957</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Frontline Barbers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+            hamburger.innerHTML = mobileNav.classList.contains('open') ? '&#10005;' : '&#9776;';
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in').forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('site-header');
+            if (header) header.style.boxShadow = window.scrollY > 20 ? '0 2px 16px rgba(0,0,0,0.06)' : 'none';
+        });
+    </script>
+</body>
+
+</html>
